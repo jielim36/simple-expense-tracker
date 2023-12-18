@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/ExpenseList.css">
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Expense Tracker</h1>
+
+      <div class="tools">
+        <form action="/logout" method="post" style="padding: 0px;">
+          <button class="button">Logout</button>
+        </form>
+        <a href="/expense" class="button">Add</a>
+      </div>
+      <div class="expense-container">
+
+        <% expenses.forEach(function(expense) { %>
+          <div class="expense <%= expense.type.toLowerCase() %>">
+            <div>
+              <h2><%= expense.title %></h2>
+              <p>Type: <%= expense.type %></p>
+              <p>Amount: $<%= expense.amount %></p>
+            </div>
+            <div>
+              <a href="/expense/remove/<%= expense.id %>" class="button">Delete</a>
+            </div>
+          </div>
+        <% }); %>
+          
+      </div>
+    </div>
+  </body>
+</html>

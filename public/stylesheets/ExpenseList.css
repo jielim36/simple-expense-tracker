@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 1200px;
+    background-color: white;
+    margin: 100px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.title {
+    border-bottom: 2px solid #f0f0f0;
+    display: block;
+    padding: 15px;
+    text-align: center;
+}
+
+.expense-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+.expense {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 15px 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.expense a{
+    transform: scale(0.8);
+    padding: 10px;
+    margin: 5px;
+}
+
+
+.expense .nested-container {
+    display: flex;  /* 水平布局 */
+    justify-content: space-between;  /* 两个子元素之间的空间平均分布 */
+}
+
+.expense:hover {
+    transform: translateY(-5px);
+}
+
+.expense.credit{
+    background-color: #ffccc7;
+}
+
+.expense.debit{
+    background-color: #d9f7be;
+}
+
+/* 基本按钮样式 */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #3498db;
+    background-color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 鼠标悬停时的样式 */
+.button:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+/* 鼠标按下时的样式 */
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tools{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px auto;
+    margin-bottom: -20px;
+    padding: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}

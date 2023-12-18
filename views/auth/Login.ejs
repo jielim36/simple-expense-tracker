@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/Register.css">
+    <title>User Registration</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            color: #3498db;
+            background-color: #ffffff;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 10px;
+        }
+
+        /* 鼠标悬停时的样式 */
+        .button:hover {
+            background-color: #3498db;
+            color: #ffffff;
+        }
+
+        /* 鼠标按下时的样式 */
+        .button:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/login" method="post">
+            <h2>User Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+            <a href="/register" class="button">Go to register</a>
+        </form>
+    </div>
+</body>
+</html>
