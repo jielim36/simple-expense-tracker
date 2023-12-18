@@ -1,8 +1,9 @@
 module.exports = {
-    DBHOST: 'localhost',
-    DBPORT: 5432,
-    DBNAME: 'expense_tracker',
-    DBUSER: 'postgres',
-    DBPASSWORD: '123456',
-    JWTSECRET: 'jielim-secret'
-}
+    DBHOST: process.env.DBHOST,
+    DBPORT: process.env.DBPORT,
+    DBNAME: process.env.DBNAME,
+    DBUSER: process.env.DBUSER,
+    DBPASSWORD: process.env.DBPASSWORD,
+    JWTSECRET: process.env.JWTSECRET,
+    WEBPORT: process.env.WEBPORT
+};
